@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pull Request Summary</title>
+    <style>
+      /* Global Styles */
+      body {
+        background: linear-gradient(135deg, #000000, #000000);
+        color: #ffffff;
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h1 {
+        color: #ffffff;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        background: linear-gradient(
+          90deg,
+          #ff0080,
+          #ff8c00,
+          #40e0d0,
+          #1e90ff,
+          #ff0080
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: hue-rotate 6s infinite linear;
+      }
+
+      /* Container */
+      .summary-container {
+        background-color: rgba(0, 0, 0, 0.85);
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        width: 80%;
+        max-width: 800px;
+        position: relative;
+      }
+
+      /* AI Style Line */
+      .ai-line {
+        background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #1e90ff);
+        height: 4px;
+        width: 50%;
+        margin: 20px auto;
+        border-radius: 10px;
+        animation: glowing 1.5s infinite alternate;
+      }
+
+      /* Textbox for Summary */
+      .summary-text {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        color: #e0e0e0;
+        margin-top: 10px;
+      }
+
+      /* Glowing Animation */
+      @keyframes glowing {
+        0% {
+          box-shadow: 0 0 10px #ff0080, 0 0 20px #ff8c00, 0 0 30px #40e0d0,
+            0 0 40px #1e90ff;
+        }
+        100% {
+          box-shadow: 0 0 20px #ff0080, 0 0 40px #ff8c00, 0 0 60px #40e0d0,
+            0 0 80px #1e90ff;
+        }
+      }
+
+      /* Text Glow Effect */
+      .summary-text::before {
+        content: "AI Generated Summary";
+        display: block;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* AI Vibe Pulsating Circle */
+      .ai-pulse {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        height: 50px;
+        width: 50px;
+        background: linear-gradient(135deg, #ff0080, #ff8c00, #40e0d0, #1e90ff);
+        border-radius: 50%;
+        animation: pulse 2s infinite ease-in-out;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 10px #ff0080, 0 0 20px #ff8c00, 0 0 30px #40e0d0,
+            0 0 40px #1e90ff;
+        }
+        100% {
+          transform: scale(1.2);
+          box-shadow: 0 0 20px #ff0080, 0 0 40px #ff8c00, 0 0 60px #40e0d0,
+            0 0 80px #1e90ff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="summary-container">
+      <div class="ai-pulse"></div>
+      <h1>Summary</h1>
+      <div class="ai-line"></div>
+      <div class="summary-text" id="summary-content">
+        <!-- The summary will be dynamically loaded here via Flask -->
+        {{summary}}
+      </div>
+    </div>
+  </body>
+</html>
