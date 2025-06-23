@@ -1,14 +1,14 @@
-AI PR Summarizer
-Tech Stack: Generative AI, Flask (Python), GitHub API, PyGithub, Gemini API, Gitpat Live
-A web-based tool that streamlines GitHub code reviews by generating AI-powered summaries of pull requests.
+### **AI PR Summarizer**
 
-Developed a Flask application that dynamically fetches and displays GitHub pull request data using the GitHub API.
+**Tech Stack:** Generative AI  |  Flask (Python)  |  GitHub API  |  PyGithub  |  Gemini API  |  Gitpat Live
 
-Integrated Gemini APIs to extract and summarize the intent and key code changes in each pull request.
+**Overview**
+A web-based tool that streamlines GitHub code reviews by producing concise, AI-generated summaries of pull requests.
 
-Improved code review efficiency by reducing the need for manual inspection of complex diffs.
+**Key Features**
 
-Designed a user-friendly interface with real-time tracking of PR statuses (open, closed, merged) to enhance collaboration.
-
-Enabled faster decision-making in team workflows by highlighting only the most relevant changes in each PR.
-
+* **Dynamic Data Retrieval:** Fetches live pull-request data with the GitHub API and PyGithub.
+* **AI-Driven Summaries:** Uses Gemini APIs to extract and summarize intent and key code changes.
+* **Efficiency Boost:** Reduces manual diff inspection, accelerating reviewer decision-making.
+* **Real-Time Status Tracking:** Displays open, closed, and merged PRs for clear project visibility.
+* **Collaboration Support:** Highlights only the most relevant changes, promoting faster, more focused team discussions.
